@@ -6,13 +6,22 @@ int32_t main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 
-	string s1,s2;
-	getline(cin,s1);
-	for(int i=0; i<s1.size(); i++)
+	int x; cin >> x;
+	int rem = 0;
+	string s1;
+	char ch;
+	while(x>0)
 	{
-		char ch;
-		ch = toupper(s1[i]);
-		s2+=ch;
+		rem = x%10;
+		s1+=rem+'0';
+		x/=10;
 	}
-cout << s2 << endl;
+	reverse(s1.begin(),s1.end());
+	cout << s1 << endl;
+    
+    long long int p; cin >> p;
+    string s2 = to_string(p);
+    cout << s2 << endl;
+
+	return 0;
 }
