@@ -40,10 +40,20 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-     sajib
-     tst{
-      ll a,b; cin >> a >> b;
-       for(int)
-     }
+      sajib
+      tst{
+         ll sum = 0;
+         ll n,k,x; cin >> n >> k >> x;
+         if(n<k || (n>x && x>k)){
+            cout <<-1 << endl;
+            continue;
+         }
+         else{
+            for(int i=0;i<n;i++){
+                sum+=k;
+            }
+         }
+         cout << sum << endl;
+      }
    return 0;
 }

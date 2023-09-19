@@ -1,37 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-int32_t main()
-{
-	int x,mid=0; cin >> x;
-
-	int a1[x];
-	for(int i = 0; i < x; i++)
-	{
-		cin >> a1[i];
+int32_t main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int n; cin >> n;
+	vector<int>v1;
+	for(int i=0;i<n;i++){
+		int y; cin >> y;
+		v1.push_back(y);
 	}
-
-	int y,left=0,right=x-1; cin >> y;
-     while(left <= right)
-     {
-          mid = (left+right)/2;
-
-          if(a1[mid] == y)
-          {
-          	 cout << mid << endl;
-          	 return 0;
-          }
-          else if (a1[mid]<y)
-          {
-                left = mid +1;
-          }
-          else
-          {
-          	  right = mid -1;
-          }
-     }
-
-     cout << -1 <<endl;
-
-     return 0;
+	int frist = 0, last = n-1;
+	int mid = 0,found = 0;
+	int k; cin >> k;
+	bool sajib = false;
+	while(frist<=last){
+		mid = (frist+last)/2;
+		if(v1[mid]==k){
+			found = mid;
+		cout << mid << endl;
+			return 0;
+		}
+		else if(v1[mid]<k){
+			frist = mid+1;
+		}
+		else{
+			last = mid-1;
+		}
+	}
+		cout << -1 << endl;
+	return 0;
 }
