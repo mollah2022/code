@@ -39,27 +39,16 @@ int my_rand(int l, int r)
 }
 
 int32_t main(){
-    
-      sajib
-         int t; cin >> t;
-          for(int j=1;j<=t;j++){
-            int count = 0;
-            int n,m; cin >> n >> m;
-            int a1[n];
-            for(int i=0;i<n;i++){
-               cin >> a1[i];
-            }
-            for(int i=0;i<n;i++){
-                 if(a1[i]%m==0){
+        sajib
+          int n; cin >> n;
+          int count = 0;
+          string s1; cin >> s1;
+          for(int i=0;i<s1.size();i++){
+               if(s1[i]=='x' && s1[i+1]=='x'&& s1[i+2]=='x'){
                      count++;
-                 }
-            }
-            if(count == n){
-                 cout<< "Case "<<j<<": " << 0 << endl;
-            }
-            else{
-                  cout<< "Case "<<j<<": " << count << endl;
-            }
-         }
+
+               }
+          }
+          cout <<count<< endl;
    return 0;
 }

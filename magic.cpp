@@ -38,28 +38,42 @@ int my_rand(int l, int r)
    return uniform_int_distribution<int>(l, r) (rng);
 }
 
-int32_t main(){
-    
-      sajib
-         int t; cin >> t;
-          for(int j=1;j<=t;j++){
-            int count = 0;
-            int n,m; cin >> n >> m;
-            int a1[n];
-            for(int i=0;i<n;i++){
-               cin >> a1[i];
+using namespace std;
+int32_t main()
+{
+        ll i,j,k;
+        string s;
+        bool flag=true;
+
+        cin>>s;
+        for(i=0;i<s.length();)
+        {
+            if(s[i]=='1' && s[i+1]=='4'  && s[i+2]=='4')
+            {
+                i+=3;//cout<<"144"<<endl;
             }
-            for(int i=0;i<n;i++){
-                 if(a1[i]%m==0){
-                     count++;
-                 }
+
+            else if(s[i]=='1' && s[i+1]=='4')
+            {
+                i+=2;//cout<<"14"<<endl;
             }
-            if(count == n){
-                 cout<< "Case "<<j<<": " << 0 << endl;
+
+            else if(s[i]=='1')
+            {
+                i++;//cout<<"14"<<endl;
             }
-            else{
-                  cout<< "Case "<<j<<": " << count << endl;
+
+            else
+            {
+                flag=false;
+                break;
             }
-         }
-   return 0;
+        }
+
+        if(flag==1)
+            cout<<"YES";
+        else
+            cout<<"NO";
+
+        return 0;
 }

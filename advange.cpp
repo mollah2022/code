@@ -40,26 +40,30 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-      sajib
-         int t; cin >> t;
-          for(int j=1;j<=t;j++){
-            int count = 0;
-            int n,m; cin >> n >> m;
-            int a1[n];
-            for(int i=0;i<n;i++){
-               cin >> a1[i];
-            }
-            for(int i=0;i<n;i++){
-                 if(a1[i]%m==0){
-                     count++;
-                 }
-            }
-            if(count == n){
-                 cout<< "Case "<<j<<": " << 0 << endl;
-            }
-            else{
-                  cout<< "Case "<<j<<": " << count << endl;
-            }
-         }
+       sajib
+          tst{
+             int n; cin >> n;
+             int a1[n];
+             vector < int > v1;
+             for(int i=0;i<n;i++){
+                  cin >> a1[i];
+             }
+             for(int i=0;i<n;i++){
+                 v1.push_back(a1[i]);
+                }
+                sort(v1.begin(),v1.end());
+                int x = v1[n-1];
+                int y = v1[n-2];
+
+                for(int i=0;i<n;i++){
+                    if(x != a1[i]){
+                         cout << a1[i]-x<<" ";
+                    }
+                    else{
+                          cout << x-y <<" ";
+                    }
+                }
+                cout << endl;
+            }    
    return 0;
 }

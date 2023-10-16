@@ -41,25 +41,28 @@ int my_rand(int l, int r)
 int32_t main(){
     
       sajib
-         int t; cin >> t;
-          for(int j=1;j<=t;j++){
-            int count = 0;
-            int n,m; cin >> n >> m;
-            int a1[n];
-            for(int i=0;i<n;i++){
-               cin >> a1[i];
-            }
-            for(int i=0;i<n;i++){
-                 if(a1[i]%m==0){
-                     count++;
-                 }
-            }
-            if(count == n){
-                 cout<< "Case "<<j<<": " << 0 << endl;
-            }
-            else{
-                  cout<< "Case "<<j<<": " << count << endl;
-            }
+         int n; cin >> n;
+         int a1[n];
+         vector < int > v1,v2;
+         int mn1 = INT_MAX;
+         int mn2 = INT_MAX;
+         for(int i=0;i<n;i++){
+              cin >> a1[i];
          }
+          for(int i=0;i<n/2;i++){
+                   v1.push_back(a1[i]); 
+          }
+          for(int i = n/2;i<n;i++){
+              v2.push_back(a1[i]);
+          }
+          for(int i=0;i<v1.size();i++){
+                int ans1 = abs(v1[i]-v1[i+1]);
+                     mn1 = min(ans1,mn1);
+          }
+           for(int i=0;i<v2.size();i++){
+                int ans2 = abs(v2[i]-v2[i+1]);
+                     mn2 = min(ans2,mn2);
+          }
+          cout << min(mn1,mn2) << endl;
    return 0;
 }

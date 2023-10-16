@@ -40,26 +40,26 @@ int my_rand(int l, int r)
 
 int32_t main(){
     
-      sajib
-         int t; cin >> t;
-          for(int j=1;j<=t;j++){
-            int count = 0;
-            int n,m; cin >> n >> m;
-            int a1[n];
-            for(int i=0;i<n;i++){
-               cin >> a1[i];
+        sajib
+        bool sojib = false;
+            tst{
+               ll n; cin >> n;
+               for(int i=1;i<=n;i++){
+                     for(int j=1;j<=n;j++){
+                            ll ans1 = (i*i*i);
+                            ll ans2 = (j*j*j);
+                            if(ans1+ans2 == n){
+                                    sojib = true;
+                                    break;
+                            }
+                     }
+               }
+               if(sojib == 0){
+                  no
+               }
+               else{
+                  yes
+               }
             }
-            for(int i=0;i<n;i++){
-                 if(a1[i]%m==0){
-                     count++;
-                 }
-            }
-            if(count == n){
-                 cout<< "Case "<<j<<": " << 0 << endl;
-            }
-            else{
-                  cout<< "Case "<<j<<": " << count << endl;
-            }
-         }
    return 0;
 }
