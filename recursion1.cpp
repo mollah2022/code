@@ -8,17 +8,16 @@ using namespace std;
 #define no   cout << "NO\n";
 
 void solve(int n){
-      if(n==1){
-        cout << n << endl;
-          return;
+      if(n==0){
+         return;
       }
-      solve(n-1);
-      cout << n << endl;
+      cout << n <<" ";
+       solve(n-1);
 }
 
 int32_t main(){
            FAST
-           int n; cin >> n;
-           solve(n);
+            int n; cin >> n;
+            solve(n);
   return 0;
 }

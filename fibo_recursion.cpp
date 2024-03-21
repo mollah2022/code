@@ -8,17 +8,25 @@ using namespace std;
 #define no   cout << "NO\n";
 
 int solve(int n){
-      if(n==1){
-         return 1;
-      }
-      else{
-          return n*solve(n-1);
-      }
+       if(n<=1){
+          return n;
+       }
+       else{
+          return solve(n-1)+solve(n-2);
+       }
 }
+
+void solvefibo(int n){
+      for(int i=0;i<n;i++){
+          cout << solve(i) <<" ";
+      }
+      cout << endl;
+}
+
 
 int32_t main(){
            FAST
             int n; cin >> n;
-            cout << solve(n) <<endl;
+            solvefibo(n);
   return 0;
 }

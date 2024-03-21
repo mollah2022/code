@@ -7,18 +7,18 @@ using namespace std;
 #define yes  cout << "YES\n";
 #define no   cout << "NO\n";
 
-void solve(int n){
-      if(n==1){
-        cout << n << endl;
-          return;
+ int solve(int n){
+      if(n==0){
+        return 0;
       }
-      cout << n << endl;
-      solve(n-1);
+      else{
+          return n+solve(n-1);
+      }
 }
 
 int32_t main(){
            FAST
-           int n; cin >> n;
-           solve(n);
+          int n; cin >> n;
+          cout << solve(n) << endl;
   return 0;
 }
