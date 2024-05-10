@@ -9,14 +9,15 @@ using namespace std;
 
 int32_t main(){
            FAST
-             tst{
-                    int n,m; cin >> n >> m;
-                    if(n>m){
-                          cout << m << " "<<n<<endl;
-                    }
-                    else{
-                           cout << n <<" "<<m<<endl;
-                    }
-             }
+              int n; cin >> n;
+              if(n>=48 && n<=50){
+                   cout <<"Probin\n";
+              }
+              else if(n>=51 && n<=53){
+                   cout << "Nobin\n";
+              }
+              else{
+                   cout <<"Bohiragoto\n";
+              }
   return 0;
 }

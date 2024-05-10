@@ -9,14 +9,6 @@ using namespace std;
 
 int32_t main(){
            FAST
-             tst{
-                    int n,m; cin >> n >> m;
-                    if(n>m){
-                          cout << m << " "<<n<<endl;
-                    }
-                    else{
-                           cout << n <<" "<<m<<endl;
-                    }
-             }
+            cout << 3 << endl;
   return 0;
 }

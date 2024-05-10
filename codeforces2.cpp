@@ -10,12 +10,14 @@ using namespace std;
 int32_t main(){
            FAST
              tst{
-                    int n,m; cin >> n >> m;
-                    if(n>m){
-                          cout << m << " "<<n<<endl;
+                    int a,b,c,d; cin >> a >> b >> c >> d;
+                    int n = abs(a-b);
+                    int m = abs(c-d);
+                    if(n>=6 && m>=4 || m>=6 && n>=4){
+                           cout <<"YES\n";
                     }
                     else{
-                           cout << n <<" "<<m<<endl;
+                           cout <<"NO\n";
                     }
              }
   return 0;
