@@ -1,24 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-int32_t main() {
-	int n; cin >> n;
-	int a1[n];
-	int y; cin >> y;
-
-	for(int i=0; i<n; i++) {
-		cin >> a1[i];
-	}
-	for(int i=0; i<n; i++) {
-         if(a1[i]==y)
-         {
-         	a1[i+1]=a1[i];
-         }
-	}
-
-	for(int i=0; i<n-1; i++){
-		cout << a1[i] << " ";
-	}
-	cout << endl;
-	return 0;
+const int mx = 100023;
+int a1[mx];
+int main(){
+              int n; cin >> n;
+              int a2[n];
+              for(int i=1 ; i<=n ; i++){
+                     cin >> a2[i];
+              }
+              for(int i=1;i<=n;i++){
+                        a1[a2[i]]++;
+               }
+              int m; cin >> m;
+              while(m--){
+                    int val; cin >> val;
+                   cout << a1[val] << endl;
+               }
+   return 0;
 }
