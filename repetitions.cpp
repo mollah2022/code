@@ -13,17 +13,20 @@ int32_t main(){
 
            string s1; cin >> s1;
 
-           int cnt = 0;
-           int mx = 0;
-           for( int i = 0; i < s1.size()-1; i++ ){
-                if( s1[i] != s1[i+1] ){
-                      cnt++;
-                }
-                else{
-                    mx = max(cnt,mx);
-                    cnt = 0;
-                }
-           }
-           cout << mx + 1 << endl;
+           int cnt = 0, mx = 0;
+
+          for( int i = 0; i < s1.size()-1; i++ ){
+                   if( s1[i] == s1[i+1] ){
+                       cnt++;
+                   }
+                   else{
+                       mx = max(mx,cnt);
+                     //cout <<  cnt << endl;
+                       cnt = 0;
+                   }
+          }
+
+          cout << max(mx,cnt) + 1 << endl;
+
   return 0;
 }
