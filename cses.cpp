@@ -1,42 +1,49 @@
-//Bismillahir Rahmanir Rahim
-#include<bits/stdc++.h>
+#include <iostream>
+#include <math.h>
+#include <vector>
+#include <string>
+#include <algorithm>
+#define lli long long int
+#define li long int
+#define ld long double
 using namespace std;
-#define ll   long long
-#define FAST ios_base::sync_with_stdio(0); cin.tie(0);
-#define tst  int t; cin >> t; while(t--)
-#define yes  cout << "YES\n";
-#define no   cout << "NO\n";
- 
-int32_t main(){
-           FAST
-               ll n; cin >> n;
 
-               if( n == 1 ){
-
-                  cout << 1 << endl;
-                  
-                  return 0;
-               }
-
-               cout << n << " ";
-
-               while( n > 1 ){
-                  
-                    if( n%2!=0 ){
-
-                          n = ((3*n)+1);
-
-                          cout << n << " ";
-                    }
-                    else if(n%2==0){
-                        
-                         n = (n/2);
-
-                        cout << n << " ";
-                    }
-
-               }
-
-
-  return 0;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    lli n;
+    cin >> n;
+    lli total = n * (n + 1) / 2;
+    if (total & 1)
+    {
+        cout << "NO";
+    }
+    else
+    {
+        cout << "YES" << endl;
+        vector<lli> arr1, arr2;
+        total /= 2LL;
+        while (n)
+        {
+            if (total - n >= 0)
+            {
+                arr1.push_back(n);
+                total -= n;
+            }
+            else
+            {
+                arr2.push_back(n);
+            }
+            n--;
+        }
+        cout << arr1.size() << endl;
+        for (li ele : arr1)
+            cout << ele << " ";
+        cout << endl;
+        cout << arr2.size() << endl;
+        for (li ele : arr2)
+            cout << ele << " ";
+    }
+    return 0;
 }
