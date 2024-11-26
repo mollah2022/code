@@ -6,15 +6,19 @@ using namespace std;
 #define tst  int t; cin >> t; while(t--)
 #define yes  cout << "YES\n";
 #define no   cout << "NO\n";
+#define endl "\n"
  
 int32_t main(){
     
            FAST
-           tst{
-                int n,m,k; cin >> n >> m >> k;
+           string s1,s2,s3; cin >> s1 >> s2 >> s3;
 
-                if( n+m == k || m+k == n || n+k == m ) cout <<"YES\n";
-                else cout <<"NO\n";
-           }
+           string s4 = s1 + s2;
+
+           sort(s3.begin(),s3.end());
+           sort(s4.begin(),s4.end());
+
+           if( s3 == s4 ) cout <<"YES\n";
+           else cout <<"NO\n";
   return 0;
 }

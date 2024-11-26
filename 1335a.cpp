@@ -11,10 +11,10 @@ int32_t main(){
     
            FAST
            tst{
-                int n,m,k; cin >> n >> m >> k;
+               int n; cin >> n;
+               n = n - 1;
 
-                if( n+m == k || m+k == n || n+k == m ) cout <<"YES\n";
-                else cout <<"NO\n";
+               cout << n/2 << endl;
            }
   return 0;
 }
