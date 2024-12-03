@@ -11,24 +11,23 @@ int32_t main(){
     
            FAST
            int n,m; cin >> n >> m;
-           vector<pair<int,int> > v1(n);
+
+           vector< pair<int,int> > v1;
 
            for( int i = 0; i < n; i++ ){
-                cin >> v1[i].first >> v1[i].second;
-                v1[i].first *=(-1);
+               int a,b; cin >> a >> b;
+               a = a*(-1);
+               v1.push_back({a,b});
            }
 
            sort(v1.begin(),v1.end());
 
            int cnt = 0;
 
-           int a = v1[m-1].first;
-           int b = v1[m-1].second;
-
-           for( int i = 0; i < v1.size(); i++ ){
-                if(v1[i].first == a && v1[i].second == b){
-                      cnt++;
-                }
+           for( auto u : v1 ){
+               if( u == v1[m-1] ){
+                  cnt++;
+               }
            }
 
            cout << cnt << endl;
